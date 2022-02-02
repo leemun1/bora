@@ -1,11 +1,15 @@
 <script setup>
-defineProps({
-  msg: String,
-});
+import Button from '../../components/Button.vue';
+
+function onClickMainButton() {
+  console.log('yo!');
+}
 </script>
 
 <template>
-  <div class="grow bg-cyan-200">Home</div>
+  <div class="grow flex items-center justify-center">
+    <Button @click="onClickMainButton">Click me!</Button>
+  </div>
 </template>
 
 <style scoped></style>
