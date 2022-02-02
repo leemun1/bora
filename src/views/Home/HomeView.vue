@@ -1,14 +1,29 @@
 <script setup>
+import { PhotographIcon, DownloadIcon } from '@heroicons/vue/outline';
+
 import Button from '../../components/Button.vue';
+import PostProcessingPreview from '../../components/PostProcessingPreview.vue';
+
+function onClickUpload() {}
 
 function onClickMainButton() {
   console.log('yo!');
 }
+function onClickDownload() {}
 </script>
 
 <template>
-  <div class="grow flex items-center justify-center">
-    <Button @click="onClickMainButton">Click me!</Button>
+  <div class="grow flex flex-col items-center justify-center">
+    <PostProcessingPreview />
+    <div class="w-80 mt-6 flex">
+      <Button class="w-16" @click="onClickUpload">
+        <PhotographIcon class="w-5 h-5" />
+      </Button>
+      <Button class="grow mx-4" @click="onClickMainButton">Click me!</Button>
+      <Button class="w-16" @click="onClickDownload">
+        <DownloadIcon class="w-5 h-5" />
+      </Button>
+    </div>
   </div>
 </template>
 
