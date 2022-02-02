@@ -19,8 +19,8 @@ function onClickDownload() {}
       <Button class="w-16" @click="onClickUpload">
         <PhotographIcon class="w-5 h-5" />
       </Button>
-      <Button class="grow mx-4" @click="onClickMainButton">Click me!</Button>
-      <Button class="w-16" @click="onClickDownload">
+      <Button :active="false" class="grow mx-4" @click="onClickMainButton">Click me!</Button>
+      <Button :active="false" class="w-16" @click="onClickDownload">
         <DownloadIcon class="w-5 h-5" />
       </Button>
     </div>
